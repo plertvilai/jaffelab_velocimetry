@@ -155,7 +155,7 @@ class velocitySensor():
 		if mode==0: #video mode
 			#write framerate to file
 			file = open(directory+'data/vidAux.csv','a') 
-			file.write('%.3f,%.3f,%.3f\n'%(time.time(),pressure,temp))
+			file.write('%.3f,%d,%.3f,%.3f\n'%(time.time(),self.vidNum,pressure,temp))
 
 		else: #burst shot mode
 			file = open(directory+'data/stillAux.csv','a') 
